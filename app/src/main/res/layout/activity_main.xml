@@ -16,4 +16,14 @@
         app:srcCompat="@drawable/logo"
         tools:layout_editor_absoluteY="-1dp" />
 
+    <Button
+        android:id="@+id/githubRep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Github Repositry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
