@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         githubRep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String githubReositoryLink = "https://github.com/UzairAsadBaig/Mobile_Computing/tree/main/app";
               
             }
         });
