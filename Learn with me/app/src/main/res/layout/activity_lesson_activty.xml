@@ -40,11 +40,11 @@
         app:layout_constraintVertical_bias="0.524" />
 
     <Button
-        android:id="@+id/o"
+        android:id="@+id/n"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
-        android:text="O"
+        android:text="N"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -84,11 +84,11 @@
         app:layout_constraintVertical_bias="0.428" />
 
     <Button
-        android:id="@+id/c20"
+        android:id="@+id/w"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="216dp"
-        android:text="C"
+        android:text="W"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -183,11 +183,11 @@
         app:layout_constraintVertical_bias="0.524" />
 
     <Button
-        android:id="@+id/p"
+        android:id="@+id/o"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="216dp"
-        android:text="P"
+        android:text="O"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -304,11 +304,11 @@
         app:layout_constraintVertical_bias="0.428" />
 
     <Button
-        android:id="@+id/b21"
+        android:id="@+id/v"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
-        android:text="B"
+        android:text="V"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -337,22 +337,22 @@
         app:layout_constraintVertical_bias="0.797" />
 
     <Button
-        android:id="@+id/a21"
+        android:id="@+id/u"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="A"
+        android:text="U"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.893" />
 
     <Button
-        android:id="@+id/r"
+        android:id="@+id/q"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="R"
+        android:text="Q"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -370,11 +370,11 @@
         app:layout_constraintVertical_bias="0.428" />
 
     <Button
-        android:id="@+id/d20"
+        android:id="@+id/t"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="316dp"
-        android:text="D"
+        android:text="T"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -579,11 +579,11 @@
         app:layout_constraintVertical_bias="0.428" />
 
     <Button
-        android:id="@+id/s"
+        android:id="@+id/r"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
-        android:text="S"
+        android:text="R"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -810,11 +810,11 @@
         app:layout_constraintVertical_bias="0.428" />
 
     <Button
-        android:id="@+id/q"
+        android:id="@+id/p"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="316dp"
-        android:text="Q"
+        android:text="P"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -832,11 +832,11 @@
         app:layout_constraintVertical_bias="0.711" />
 
     <Button
-        android:id="@+id/c21"
+        android:id="@+id/s"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="216dp"
-        android:text="C"
+        android:text="S"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
