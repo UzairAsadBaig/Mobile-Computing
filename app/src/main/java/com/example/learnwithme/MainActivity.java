@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String githubReositoryLink = "https://github.com/UzairAsadBaig/Mobile_Computing/tree/main/app";
                 Intent gitIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(githubReositoryLink));
-
+                startActivity(gitIntent);
             }
         });
     }
