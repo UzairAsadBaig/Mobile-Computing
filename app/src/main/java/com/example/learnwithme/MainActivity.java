@@ -16,5 +16,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         githubRep = findViewById(R.id.githubRep);
 
+        //Adding event listner to the github repository button
+        githubRep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              
+            }
+        });
     }
 }
