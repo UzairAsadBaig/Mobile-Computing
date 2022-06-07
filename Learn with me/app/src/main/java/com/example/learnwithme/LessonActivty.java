@@ -8,18 +8,21 @@ import android.view.View;
 import android.widget.Button;
 
 public class LessonActivty extends AppCompatActivity {
-    Button a;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson_activty);
-        a = findViewById(R.id.a);
-        a.setOnClickListener(new View.OnClickListener() {
+
+        findViewById(R.id.a).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LessonActivty.this,singleLesson.class);
+                intent.putExtra("name","a");
                 startActivity(intent);
             }
         });
+
+
     }
 }
