@@ -22,11 +22,21 @@ public class LessonActivty extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         findViewById(R.id.b).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LessonActivty.this,singleLesson.class);
                 intent.putExtra("name","b");
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.c).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LessonActivty.this,singleLesson.class);
+                intent.putExtra("name","c");
                 startActivity(intent);
             }
         });
