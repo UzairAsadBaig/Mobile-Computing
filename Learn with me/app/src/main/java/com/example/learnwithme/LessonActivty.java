@@ -50,6 +50,15 @@ public class LessonActivty extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.e).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LessonActivty.this,singleLesson.class);
+                intent.putExtra("name","e");
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
