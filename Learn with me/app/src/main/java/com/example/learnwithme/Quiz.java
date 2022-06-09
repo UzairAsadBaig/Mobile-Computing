@@ -64,6 +64,25 @@ public class Quiz extends AppCompatActivity {
                 submit.setEnabled(userAnswer.size()==5);
             }
         });
-
+        r5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                b5 = findViewById(i);
+                userAnswer.add((String) b5.getText());
+                submit.setEnabled(userAnswer.size()==5);
+            }
+        });
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int marks = 0;
+                for (int i = 0; i <7; i++)
+                    if (userAnswer.get(i).matches(ans[i]))
+                        marks++;
+                Intent intent = new Intent(Quiz.this, ResultActivity.class);
+                intent.putExtra("marks",marks);
+                startActivity(intent);
+            }
+        });
     }
 }
