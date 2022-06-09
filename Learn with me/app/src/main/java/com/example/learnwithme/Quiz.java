@@ -48,6 +48,22 @@ public class Quiz extends AppCompatActivity {
                 submit.setEnabled(userAnswer.size()==5);
             }
         });
+        r3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                b3 = findViewById(i);
+                userAnswer.add((String) b3.getText());
+                submit.setEnabled(userAnswer.size()==5);
+            }
+        });
+        r4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                b4 = findViewById(i);
+                userAnswer.add((String) b4.getText());
+                submit.setEnabled(userAnswer.size()==5);
+            }
+        });
 
     }
 }
