@@ -40,5 +40,14 @@ public class Quiz extends AppCompatActivity {
             }
         });
 
+        r2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                b2 = findViewById(i);
+                userAnswer.add((String) b2.getText());
+                submit.setEnabled(userAnswer.size()==5);
+            }
+        });
+
     }
 }
