@@ -10,9 +10,9 @@ import java.util.HashMap;
 import java.util.Locale;
 
 public class singleLesson extends AppCompatActivity {
-     TextView t;
+     TextView t1,t2;
      ImageView i;
-     Map<String,String> map = new HashMap<String,String>;
+     HashMap<String,String> map = new HashMap<String,String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,10 +45,12 @@ public class singleLesson extends AppCompatActivity {
         map.put("y","Yatch");
         map.put("z","Zebra");
 
-        t = findViewById(R.id.lessonName);
+        t1 = findViewById(R.id.lessonName);
+        t2 = findViewById(R.id.lessonExample);
         i = findViewById(R.id.lessonImage);
         String name = getIntent().getStringExtra("name");
-        t.setText(name.toUpperCase(Locale.ROOT));
+        t1.setText(name.toUpperCase(Locale.ROOT));
+        t2.setText(map.get(name));
         i.setImageResource(getResources().getIdentifier(name, "drawable", getPackageName()));
     }
 }
