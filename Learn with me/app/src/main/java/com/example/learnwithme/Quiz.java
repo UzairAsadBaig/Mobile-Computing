@@ -79,7 +79,7 @@ public class Quiz extends AppCompatActivity {
                 for (int i = 0; i <7; i++)
                     if (userAnswer.get(i).matches(ans[i]))
                         marks++;
-                Intent intent = new Intent(Quiz.this, ResultActivity.class);
+                Intent intent = new Intent(Quiz.this, Result.class);
                 intent.putExtra("marks",marks);
                 startActivity(intent);
             }
