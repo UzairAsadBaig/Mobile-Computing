@@ -29,6 +29,16 @@ public class Quiz extends AppCompatActivity {
         r4 = findViewById(R.id.r4);
         r5 = findViewById(R.id.r5);
 
-      
+        submit = findViewById(R.id.submit);
+
+        r1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                b1 = findViewById(i);
+                userAnswer.add((String) b1.getText());
+                submit.setEnabled(userAnswer.size()==5);
+            }
+        });
+
     }
 }
