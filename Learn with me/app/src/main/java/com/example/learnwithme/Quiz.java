@@ -23,5 +23,12 @@ public class Quiz extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        r1 = findViewById(R.id.r1);
+        r2 = findViewById(R.id.r2);
+        r3 = findViewById(R.id.r3);
+        r4 = findViewById(R.id.r4);
+        r5 = findViewById(R.id.r5);
+
+      
     }
 }
