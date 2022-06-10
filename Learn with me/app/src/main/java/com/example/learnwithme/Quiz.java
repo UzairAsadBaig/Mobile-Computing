@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -30,6 +31,7 @@ public class Quiz extends AppCompatActivity {
         r5 = findViewById(R.id.r5);
 
         submit = findViewById(R.id.submit);
+        submit.setEnabled(false);
 
         r1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -76,11 +78,11 @@ public class Quiz extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int marks = 0;
-                for (int i = 0; i <7; i++)
+                for (int i = 0; i <5; i++)
                     if (userAnswer.get(i).matches(ans[i]))
                         marks++;
                 Intent intent = new Intent(Quiz.this, Result.class);
-                intent.putExtra("marks",marks);
+                intent.putExtra("marks",""+marks);
                 startActivity(intent);
             }
         });
