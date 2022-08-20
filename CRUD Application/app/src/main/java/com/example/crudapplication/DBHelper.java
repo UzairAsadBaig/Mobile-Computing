@@ -49,10 +49,18 @@ public class DBHelper extends SQLiteOpenHelper {
         cv.put(STUDENT_ENROLL, STUDENTModel.isEnroll());
         db.insert(STUDENT_TABLE, null, cv);
         db.close();
-        //NullCoumnHack
-        //long insert =
-        //if (insert == -1) { return false; }
-        //else{return true;}
+    }
+
+    public void  updateStudent(StudentModel STUDENTModel, String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        //Hash map, as we did in bundles
+        ContentValues cv = new ContentValues();
+
+        cv.put(STUDENT_NAME, STUDENTModel.getName());
+        cv.put(STUDENT_ROLL, STUDENTModel.getRollNmber());
+        cv.put(STUDENT_ENROLL, STUDENTModel.isEnroll());
+        db.update(STUDENT_TABLE, cv, "StudentID = ?" ,new String[]{id});
+        db.close();
     }
 
     public ArrayList<StudentModel> getAllStudents() {
