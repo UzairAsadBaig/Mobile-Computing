@@ -3,7 +3,9 @@ package com.example.crudapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -56,7 +58,14 @@ public class MainActivity extends AppCompatActivity {
                 ArrayAdapter arrayAdapter = new ArrayAdapter<StudentModel>
                         (MainActivity.this, android.R.layout.simple_list_item_1,list);
                 listViewStudent.setAdapter(arrayAdapter);
+            }
+        });
 
+        listViewStudent.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String student = (String) listViewStudent.getItemAtPosition(i);
+                Log.d("@@@", student);
             }
         });
 
