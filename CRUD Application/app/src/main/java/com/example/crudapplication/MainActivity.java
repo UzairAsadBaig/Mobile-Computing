@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent recordIntent = new Intent(MainActivity.this,Record.class);
                 recordIntent.putExtra("name",student.getName());
                 recordIntent.putExtra("roll",student.getRollNmber());
-                recordIntent.putExtra("name",student.isEnroll());
+                recordIntent.putExtra("isEnroll",student.isEnroll());
                 startActivity(recordIntent);
 
             }
