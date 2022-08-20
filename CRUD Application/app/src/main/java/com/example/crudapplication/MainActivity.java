@@ -1,4 +1,4 @@
-package haqnawaz.org.a20220815db;
+package com.example.crudapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
