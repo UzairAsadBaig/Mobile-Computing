@@ -2,6 +2,7 @@ package com.example.crudapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -64,8 +65,13 @@ public class MainActivity extends AppCompatActivity {
         listViewStudent.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String student = (String) listViewStudent.getItemAtPosition(i);
-                Log.d("@@@", student);
+                StudentModel student = (StudentModel)  listViewStudent.getItemAtPosition(i);
+                Intent recordIntent = new Intent(MainActivity.this,Record.class);
+                recordIntent.putExtra("name",student.getName());
+                recordIntent.putExtra("roll",student.getRollNmber());
+                recordIntent.putExtra("name",student.isEnroll());
+                startActivity(recordIntent);
+
             }
         });
 
