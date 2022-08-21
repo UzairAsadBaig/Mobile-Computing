@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
 
 public class Record extends AppCompatActivity {
 
@@ -41,10 +43,24 @@ public class Record extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DBHelper dbHelper = new DBHelper(Record.this);
+                int stRoll = student.getRollNmber();
                 student.setName(String.valueOf(name.getText()));
-                student.setEnroll(enroll.getShowText());
-                student.setRollNmber(Integer.parseInt(String.valueOf(rollNo.getText())));
-                dbHelper.updateStudent(student);
+                student.setEnroll(enroll.isChecked());
+                student.setRollNmber(Integer.parseInt(rollNo.getText().toString()));
+                Log.d("@@@", student.toString());
+                dbHelper.updateStudent(student,stRoll);
+                Toast.makeText(Record.this, "Student has been updated!", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DBHelper dbHelper = new DBHelper(Record.this);
+                int stRoll = student.getRollNmber();
+                dbHelper.deleteStudent(stRoll);
+                Toast.makeText(Record.this, "Student has been deleted!", Toast.LENGTH_SHORT).show();
 
             }
         });
