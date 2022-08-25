@@ -69,6 +69,27 @@ public class DbHelper extends SQLiteOpenHelper{
         cursorCourses.close();
         return surahDetailsArrayList;
     }
+    public ArrayList getParaDetails(int id) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursorCourses = db.rawQuery("SELECT * FROM " + "tayah " + "WHERE paraID="+id +" ORDER BY AyaID", null);
+        ArrayList paraDetailsArrayList = new ArrayList();
+
+        if (cursorCourses.moveToFirst()) {
+            do {
+                if(cursorCourses.getString(2).matches("1")){
+                    paraDetailsArrayList.add(new ParahDetailModel("بِسۡمِ اللّٰہِ الرَّحۡمٰنِ الرَّحِیۡمِ",
+                            "شروع اللہ کا نام لے کر جو بڑا مہربان نہایت رحم والا ہے۔","With the name of Allah," +
+                            " the All-Merciful, the Very-Merciful."));
+                }
+                paraDetailsArrayList.add(new ParahDetailModel(cursorCourses.getString(3),
+                        cursorCourses.getString(5),cursorCourses.getString(7)));
+            } while (cursorCourses.moveToNext());
+        }
+        cursorCourses.close();
+        return paraDetailsArrayList;
+    }
 
 
 }
