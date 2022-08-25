@@ -19,6 +19,7 @@ import com.example.alhuda.R;
 import com.example.alhuda.SurahModel;
 import com.example.alhuda.databinding.FragmentGalleryBinding;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GalleryFragment extends Fragment {
@@ -27,28 +28,17 @@ public class GalleryFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View contentView = inflater.inflate(R.layout.fragment_gallery, container, false);
-
-        ListView listView = contentView.findViewById(R.id.listview);
+        View contentView = inflater.inflate(R.layout.fragment_home, container, false);
+        ListView listView = contentView.findViewById(R.id.listview2);
         DbHelper dbHelper = new DbHelper(getContext());
-        List<SurahModel> list = dbHelper.getAllSurahNames();
+        List list = new ArrayList();
+        for (int i = 1; i < 31; i++) {
+            list.add("Para "+i);
+        }
         ArrayAdapter ad =new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1,list);
         listView.setAdapter(ad);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String res = adapterView.getItemAtPosition(i).toString();
-                String arr[] =res.split(" ");
-                String id= arr[0];
-                String name = arr[1];
-//                Intent intent = new Intent(getContext(), SurahDetailActivity.class);
-//                intent.putExtra("name",name);
-//                intent.putExtra("id",id);
-//                startActivity(intent);
-
-            }
-        });
+     
 
         return contentView;
     }
