@@ -17,7 +17,7 @@ public class DbHelper extends SQLiteOpenHelper{
 
 
     public DbHelper(@Nullable Context context) {
-        super(context, "quran_db.db", null, 1);
+        super(context, "quran_database_new.db", null, 1);
     }
 
 

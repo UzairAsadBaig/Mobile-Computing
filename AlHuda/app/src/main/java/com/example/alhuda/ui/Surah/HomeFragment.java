@@ -4,13 +4,21 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.alhuda.DbHelper;
+import com.example.alhuda.R;
+import com.example.alhuda.SurahModel;
 import com.example.alhuda.databinding.FragmentHomeBinding;
+
+import java.util.List;
 
 public class HomeFragment extends Fragment {
 
@@ -18,15 +26,30 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        View contentView = inflater.inflate(R.layout.fragment_gallery, container, false);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        ListView listView = contentView.findViewById(R.id.listview);
+        DbHelper dbHelper = new DbHelper(getContext());
+        List<SurahModel> list = dbHelper.getAllSurahNames();
+        ArrayAdapter ad =new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1,list);
+        listView.setAdapter(ad);
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String res = adapterView.getItemAtPosition(i).toString();
+                String arr[] =res.split(" ");
+                String id= arr[0];
+                String name = arr[1];
+//                Intent intent = new Intent(getContext(), SurahDetailActivity.class);
+//                intent.putExtra("name",name);
+//                intent.putExtra("id",id);
+//                startActivity(intent);
+
+            }
+        });
+
+        return contentView;
     }
 
     @Override
