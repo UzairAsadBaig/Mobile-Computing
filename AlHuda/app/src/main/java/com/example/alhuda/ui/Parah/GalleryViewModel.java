@@ -1,4 +1,4 @@
-package com.example.alhuda.ui.gallery;
+package com.example.alhuda.ui.Parah;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

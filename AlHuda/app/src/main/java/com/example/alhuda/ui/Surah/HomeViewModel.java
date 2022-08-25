@@ -1,4 +1,4 @@
-package com.example.alhuda.ui.home;
+package com.example.alhuda.ui.Surah;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

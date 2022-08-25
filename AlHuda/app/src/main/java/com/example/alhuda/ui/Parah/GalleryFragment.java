@@ -1,4 +1,4 @@
-package com.example.alhuda.ui.gallery;
+package com.example.alhuda.ui.Parah;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

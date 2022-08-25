@@ -1,4 +1,4 @@
-package com.example.alhuda.ui.home;
+package com.example.alhuda.ui.Surah;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
