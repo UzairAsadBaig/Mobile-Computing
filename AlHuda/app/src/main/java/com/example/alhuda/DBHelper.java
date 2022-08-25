@@ -31,5 +31,24 @@ public class DbHelper extends SQLiteOpenHelper{
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
+    public ArrayList getAllSurahNames() {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursorCourses = db.rawQuery("SELECT * FROM " + "tsurah", null);
+
+        ArrayList<SurahModel> surahArrayList = new ArrayList<SurahModel>();
+
+        if (cursorCourses.moveToFirst()) {
+            do {
+                surahArrayList.add(new SurahModel(cursorCourses.getString(4),
+                        cursorCourses.getInt(0)));
+            } while (cursorCourses.moveToNext());
+        }
+        cursorCourses.close();
+        return surahArrayList;
+    }
+
+
 
 }
