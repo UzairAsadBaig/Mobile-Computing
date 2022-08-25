@@ -1,4 +1,4 @@
-package com.example.alhuda.ui.Parah;
+package com.example.alhuda;
 
 import androidx.appcompat.app.AppCompatActivity;
 
