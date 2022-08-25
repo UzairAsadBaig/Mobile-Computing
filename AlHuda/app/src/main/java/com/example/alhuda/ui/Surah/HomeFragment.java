@@ -41,7 +41,7 @@ public class HomeFragment extends Fragment {
                 String arr[] =res.split(" ");
                 String id= arr[0];
                 String name = arr[1];
-//                Intent intent = new Intent(getContext(), SurahDetailActivity.class);
+//                Intent intent = new Intent(getContext(), SurahActivity.class);
 //                intent.putExtra("name",name);
 //                intent.putExtra("id",id);
 //                startActivity(intent);

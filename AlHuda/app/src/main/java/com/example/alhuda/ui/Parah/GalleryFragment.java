@@ -2,6 +2,7 @@ package com.example.alhuda.ui.Parah;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,7 @@ public class GalleryFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View contentView = inflater.inflate(R.layout.fragment_home, container, false);
+        View contentView = inflater.inflate(R.layout.fragment_gallery, container, false);
         ListView listView = contentView.findViewById(R.id.listview2);
         DbHelper dbHelper = new DbHelper(getContext());
         List list = new ArrayList();
@@ -44,7 +45,7 @@ public class GalleryFragment extends Fragment {
                 String res = adapterView.getItemAtPosition(i).toString();
                 String arr[] =res.split(" ");
                 String id = arr[1];
-//                Intent intent = new Intent(getContext(), ParahDetailActivity.class);
+//                Intent intent = new Intent(getContext(), ParahActivity.class);
 //                intent.putExtra("id",id);
 //                startActivity(intent);
             }
