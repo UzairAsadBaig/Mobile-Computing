@@ -38,7 +38,17 @@ public class GalleryFragment extends Fragment {
         ArrayAdapter ad =new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1,list);
         listView.setAdapter(ad);
 
-     
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String res = adapterView.getItemAtPosition(i).toString();
+                String arr[] =res.split(" ");
+                String id = arr[1];
+//                Intent intent = new Intent(getContext(), ParahDetailActivity.class);
+//                intent.putExtra("id",id);
+//                startActivity(intent);
+            }
+        });
 
         return contentView;
     }
