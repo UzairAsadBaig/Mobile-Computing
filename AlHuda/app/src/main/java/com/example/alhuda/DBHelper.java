@@ -8,7 +8,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.example.quranapp.ui.gallery.GalleryFragment;
+import com.example.alhuda.ui.Parah.GalleryFragment;
 
 import java.util.ArrayList;
 
