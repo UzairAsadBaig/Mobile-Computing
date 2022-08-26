@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.alhuda.DbHelper;
+import com.example.alhuda.ParahActivity;
 import com.example.alhuda.R;
 import com.example.alhuda.SurahModel;
 import com.example.alhuda.databinding.FragmentGalleryBinding;
@@ -45,9 +46,9 @@ public class GalleryFragment extends Fragment {
                 String res = adapterView.getItemAtPosition(i).toString();
                 String arr[] =res.split(" ");
                 String id = arr[1];
-//                Intent intent = new Intent(getContext(), ParahActivity.class);
-//                intent.putExtra("id",id);
-//                startActivity(intent);
+                Intent intent = new Intent(getContext(), ParahActivity.class);
+                intent.putExtra("id",id);
+                startActivity(intent);
             }
         });
 

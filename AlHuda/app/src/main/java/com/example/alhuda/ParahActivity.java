@@ -15,11 +15,11 @@ public class ParahActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parah);
+        DbHelper dbHelper = new DbHelper(ParahActivity.this);
         Intent i = getIntent();
         String id=i.getStringExtra("id");
         setTitle("Parah "+id);
         ListView listView = findViewById(R.id.parahListView);
-        DbHelper dbHelper = new DbHelper(ParahActivity.this);
         List<SurahModel> list = dbHelper.getParaDetails(Integer.parseInt(id));
         ArrayAdapter ad =new ArrayAdapter(ParahActivity.this, android.R.layout.simple_list_item_1,list);
         listView.setAdapter(ad);

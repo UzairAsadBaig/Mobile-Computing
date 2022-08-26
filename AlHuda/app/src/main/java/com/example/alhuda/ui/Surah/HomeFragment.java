@@ -1,5 +1,6 @@
 package com.example.alhuda.ui.Surah;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.alhuda.DbHelper;
 import com.example.alhuda.R;
+import com.example.alhuda.SurahActivity;
 import com.example.alhuda.SurahModel;
 import com.example.alhuda.databinding.FragmentHomeBinding;
 
@@ -41,10 +43,10 @@ public class HomeFragment extends Fragment {
                 String arr[] =res.split(" ");
                 String id= arr[0];
                 String name = arr[1];
-//                Intent intent = new Intent(getContext(), SurahActivity.class);
-//                intent.putExtra("name",name);
-//                intent.putExtra("id",id);
-//                startActivity(intent);
+                Intent intent = new Intent(getContext(), SurahActivity.class);
+                intent.putExtra("name",name);
+                intent.putExtra("id",id);
+                startActivity(intent);
 
             }
         });
